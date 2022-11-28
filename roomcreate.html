@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome-carrot-home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="screen-lock">
+        모바일 모드로 접속해주시기 바랍니다.
+    </div>
+    <div class="status-bar">
+        <div class="status-bar-column">09:41</div>
+        <div class="status-bar-column">
+            <i class="fa-solid fa-stopwatch"></i>
+            <i class="fa-brands fa-bluetooth-b"></i>
+            <i class="fa-solid fa-volume-xmark"></i>
+            <i class="fa-solid fa-wifi"></i>
+            <i class="fa-solid fa-signal"></i>
+            <span>48%</span>
+            <i class="fa-solid fa-battery-half"></i>
+        </div>
+    </div>
+    <div class="screen-header">
+        <div class="screen-header-column">
+            <a href="store.html"><i class="fa-solid fa-angle-left fa-3x"></i></a>
+            <span>뿜바이 방 (명경막국수)</span>
+        </div>
+
+    </div>
+    <main class="mycarrot-main">
+        <div class="top-margin"></div>
+        <ul class="mycarrot-bottom insetting">
+            <span class="my-activity">'회광반조' 님 뿜장 스탬프 1/5개 </span>
+            <button class="createroombtn">방 만들기</button>
+            <div class="howmany" style="display: none;">
+                <div class="howmany-row">
+                    <span class="minute">
+                        <p class="minute-info">0 분</p>
+                        <button class="minute-up">+</button>
+                        <button class="minute-down">-</button>
+                    </span>
+                </div>
+                <div class="howmany-row">
+                    <span class="patiant">
+                        <p class="patiant-info">0 명</p>
+                        <button class="patiant-up">+</button>
+                        <button class="patiant-down">-</button>
+                    </span>
+                </div>
+                <button class="okaycreate">설정 완료</button>
+            </div>
+        </ul>
+        <div class="inline"></div>
+        <ul class="mycarrot-bottom">
+            <span class="my-activity">현재 개설된 방</span>
+            <span class="noroom"> 방이 없어요 ㅠㅠ..</span>
+            <span class="yesroom" style="display: none;"></span>
+        </ul>
+        <div class="inline"></div>
+        <ul class="mycarrot-bottom">
+            <span class="my-activity">Beta 0.1ver </span>
+        </ul>
+
+    </main>
+    <div class="screen-nav">
+        <div class="screen-nav-column home-ani"><a href="home.html"><i
+                    class="fa-solid fa-house fa-lg"></i><span>홈</span></a></div>
+
+        <div class="screen-nav-column home-ani"><a href="myboundary.html"><i
+                    class="fa-solid fa-location-dot fa-lg"></i><span>주문 정보</span></a></div>
+
+
+        <div class="screen-nav-column home-ani"><a href="chatting.html"><i
+                    class="fa-regular fa-comments fa-lg"></i><span>채팅</span></a></div>
+
+
+        <div class="screen-nav-column home-ani"><a href="mycharrot.html"><i class="fa-regular fa-user fa-lg"></i><span>
+                    <div class="smalldot nav-where"></div>내 정보
+                </span></a></div>
+    </div>
+
+    <div class="status-navigation">
+
+        <div class="status-navigation-button">
+            <i class="fa-solid fa-bars fa-lg"></i>
+        </div>
+        <div class="status-navigation-button">
+            <i class="fa-regular fa-square fa-lg"></i>
+        </div>
+        <div class="status-navigation-button">
+            <i class="fa-solid fa-angle-left fa-lg"></i>
+
+        </div>
+    </div>
+    </div>
+    <script src="https://kit.fontawesome.com/fc53c77dbe.js" crossorigin="anonymous">
+    </script>
+    <script>
+        const howmany = document.querySelector('.howmany')
+        const noroom = document.querySelector('.noroom')
+        const yesroom = document.querySelector('.yesroom')
+        const okaycreate = document.querySelector('.okaycreate')
+        const createroombtn = document.querySelector('.createroombtn')
+        let minute_info = document.querySelector('.minute-info')
+        let patiant_info = document.querySelector('.patiant-info')
+        const minute_up = document.querySelector('.minute-up')
+        const minute_down = document.querySelector('.minute-down')
+        const patiant_up = document.querySelector('.patiant-up')
+        const patiant_down = document.querySelector('.patiant-down')
+        function createroomfunc(event) {
+            if (howmany.style.display == 'none') {
+                howmany.style.display = 'block';
+            } else {
+                howmany.style.display = 'none'
+            }
+        }
+        let minute_var = 0;
+        let patiant_var = 0;
+        let complete_var = 0;
+        function minuteupfunc(event) {
+            minute_var++;
+            minute_info.textContent = `${minute_var} 분`
+        }
+        function minutedownfunc(event) {
+            minute_var--;
+            minute_info.textContent = `${minute_var} 분`
+        }
+        function patiantupfunc(event) {
+            patiant_var++;
+            patiant_info.textContent = `${patiant_var} 명`
+        }
+        function patiantdownfunc(event) {
+            patiant_var--;
+            patiant_info.textContent = `${patiant_var} 명`
+        }
+        function okaycreatefunc(event) {
+            noroom.style.display = 'none'
+            yesroom.style.display = 'block'
+            yesroom.textContent = `'회광반조' 님과 뿜바이 할 ${patiant_var} 명! / ${minute_var} 분 남음`
+            howmany.style.display = 'none'
+            complete_var += 5000
+            if (complete_var === 5000) {
+                setTimeout(() => {
+                    alert('핫딜완료')
+                }, 5000);
+            }
+        }
+
+        createroombtn.addEventListener('click', createroomfunc)
+        minute_up.addEventListener('click', minuteupfunc)
+        minute_down.addEventListener('click', minutedownfunc)
+        patiant_up.addEventListener('click', patiantupfunc)
+        patiant_down.addEventListener('click', patiantdownfunc)
+        okaycreate.addEventListener('click', okaycreatefunc)
+    </script>
+</body>
+
+</html>

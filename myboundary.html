@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome-carrot-home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="screen-lock">
+        모바일 모드로 접속해주시기 바랍니다.
+    </div>
+    <div class="status-bar">
+        <div class="status-bar-column">09:41</div>
+        <div class="status-bar-column">
+            <i class="fa-solid fa-stopwatch"></i>
+            <i class="fa-brands fa-bluetooth-b"></i>
+            <i class="fa-solid fa-volume-xmark"></i>
+            <i class="fa-solid fa-wifi"></i>
+            <i class="fa-solid fa-signal"></i>
+            <span>48%</span>
+            <i class="fa-solid fa-battery-half"></i>
+        </div>
+    </div>
+    <div class="screen-header">
+        <div class="screen-header-column">
+            <span>강릉시</span>
+            <i class="fa-solid fa-angle-down fa-lg"></i>
+        </div>
+        <div class="screen-header-column">
+            <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+            <i class="fa-solid fa-qrcode fa-lg"></i>
+            <i class="fa-solid fa-bell fa-lg"></i>
+            <div class="smalldot header-where"></div>
+        </div>
+    </div>
+    <main class="myboundary-main">
+        <div class="bus"><i class="fa-solid fa-van-shuttle"></i></div>
+        <div class="busway">'강릉원주대' 까지 '1' 정거장 남았어요!</div>
+        <div class="orderinfo">
+            <span>뿜장 : 회광반조 님</span>
+            <span>뿜원 : '강희원', '최원준', '김준', '박지훈', '오제관'</span>
+            <span>주문한 곳 : 명경막국수 (강릉) </span>
+            <span>주문한 음식 : 막국수 </span>
+            <span><button class="number-receive">수령 번호 확인</button></span>
+            <div class="numbersinfo" style="display: none;">
+                <div class="numbers"> 2017 </div>
+                <div class="boxnumber"> 4번 캐비닛 </div>
+                <a href="complete.html"><button class="completebtn"> 뿜빠이 완료 </button></a>
+                <div class="warningtext"> *완료를 누르지 않으면 정상적 진행이 되지 않아요. </div>
+            </div>
+        </div>
+    </main>
+    <div class="screen-nav">
+        <div class="screen-nav-column home-ani"><a href="home.html"><i
+                    class="fa-solid fa-house fa-lg"></i><span>홈</span></a></div>
+
+        <div class="screen-nav-column home-ani"><a href="myboundary.html"><i
+                    class="fa-solid fa-location-dot fa-lg"></i><span>주문 정보</span></a></div>
+
+
+        <div class="screen-nav-column home-ani"><a href="chatting.html"><i
+                    class="fa-regular fa-comments fa-lg"></i><span>채팅</span></a></div>
+
+
+        <div class="screen-nav-column home-ani"><a href="mycharrot.html"><i class="fa-regular fa-user fa-lg"></i><span>
+                    <div class="smalldot nav-where"></div>내 정보
+                </span></a></div>
+    </div>
+    <div class="status-navigation">
+
+        <div class="status-navigation-button">
+            <i class="fa-solid fa-bars fa-lg"></i>
+        </div>
+        <div class="status-navigation-button">
+            <i class="fa-regular fa-square fa-lg"></i>
+        </div>
+        <div class="status-navigation-button">
+            <i class="fa-solid fa-angle-left fa-lg"></i>
+
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/fc53c77dbe.js" crossorigin="anonymous">
+    </script>
+    <script>
+        const reciptbtn = document.querySelector('.number-receive')
+        const numbersinfo = document.querySelector('.numbersinfo')
+
+
+        function reciptbtnfunc(event) {
+            numbersinfo.style.display = 'block'
+        }
+        reciptbtn.addEventListener('click', reciptbtnfunc)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,241 @@
+.mycarrot-main {
+    padding: 15px;
+}
+
+.mycarrot-top {
+    padding: 70px 0 0 0;
+
+}
+
+.user-profile {
+    display: flex;
+    padding: 15px 0;
+    justify-content: space-around;
+
+    align-items: center;
+}
+
+.user-profile img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+
+.user-profile span {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.user-profile span div:first-child {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.user-profile span div:last-child {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.carrotbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px dashed var(--carrot);
+    border-radius: 10px;
+}
+
+.carrotbox img {
+    width: 100px;
+    height: 50px;
+}
+
+.past-trade {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 25px 0;
+    font-weight: bold;
+}
+
+.past-trade-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.past-trade-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    color: var(--carrot);
+    background-color: #ffede3;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.mycarrot-bottom {
+    padding: 15px 0 15px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.mycarrot-bottom:last-child {
+    padding-bottom: 100px;
+}
+
+.mycarrot-bottom .my-activity {
+    padding: 10px 0;
+    font-weight: bold;
+}
+
+.new-father {
+    position: relative;
+}
+
+.mycarrot-bottom li {
+    color: black;
+    padding: 15px 0;
+    display: flex;
+}
+
+.mycarrot-bottom div {
+
+    margin-right: 15px;
+}
+
+.mycarrot-bottom i {
+    color: rgba(0, 0, 0, 0.85);
+}
+
+.mycarrot-bottom .new-father .new {
+    top: 12px;
+    left: 130px;
+}
+
+.mycarrot-bottom .insetting {
+    padding-top: 15px;
+}
+
+.top-margin {
+    margin-top: 50px;
+}
+
+.buttons input {
+    width: 25px;
+
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.createroombtn {
+    border-radius: 10px;
+    background-color: rgb(0, 201, 201);
+    border: none;
+    height: 30px;
+    width: 130px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.howmany {
+    background-color: rgba(0, 0, 0, 0.35);
+    width: 130px;
+    height: 80px;
+    margin: 10px 5px;
+    padding: 5px;
+    border-radius: 15px;
+    font-weight: 800;
+}
+
+.minute {
+    display: flex;
+    margin: 10px;
+    color: white;
+    font-size: 15px;
+    margin-bottom: 25px;
+
+
+}
+
+.minute-up {
+    color: white;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: rgba(52, 255, 255);
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    margin-left: 10px;
+}
+
+.minute-down {
+    color: white;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: rgba(52, 255, 255);
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.patiant {
+    display: flex;
+    margin: 10px;
+    color: white;
+    font-size: 15px;
+
+}
+
+.patiant-up {
+    color: white;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: rgba(52, 255, 255);
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    margin-left: 10px;
+}
+
+.patiant-down {
+    color: white;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: rgba(52, 255, 255);
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.okaycreate {
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: rgb(52, 255, 255);
+    border: none;
+    height: 20px;
+    width: 100px;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.inline {
+    margin-top: 10px;
+}
+
+.yesroom {
+    padding: 10px;
+    background-color: rgb(0, 240, 240);
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    font-weight: 800;
+}
