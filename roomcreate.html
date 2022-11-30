@@ -141,9 +141,18 @@
             patiant_info.textContent = `${patiant_var} 명`
         }
         function okaycreatefunc(event) {
+            let patiant_count = 0;
             noroom.style.display = 'none'
             yesroom.style.display = 'block'
-            yesroom.textContent = `'회광반조' 님과 뿜바이 할 ${patiant_var} 명! / ${minute_var} 분 남음`
+            yesroom.textContent = `'회광반조' 님의 방(${patiant_count}/${patiant_var}) / ${minute_var} 분 남음`
+            const set1 = setInterval(() => {
+                patiant_count++
+                console.log(patiant_count)
+                yesroom.textContent = `'회광반조' 님의 방(${patiant_count}/${patiant_var}) / ${minute_var} 분 남음`
+                if (patiant_count === patiant_var) {
+                    clearInterval(set1);
+                }
+            }, 1000);
             howmany.style.display = 'none'
             complete_var += 5000
             if (complete_var === 5000) {
